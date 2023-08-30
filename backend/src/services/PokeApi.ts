@@ -6,6 +6,34 @@ export default class PokeApiService {
     this.apiInstance = axios.create({ baseURL: process.env.POKE_API_HOST });
   }
 
+  async listPokemon(limit = 20, page?: number) {
+    const { data: { results, count } } = await this.apiInstance.get('pokemon', {
+      params: {
+        limit,
+        ...(page && {
+          offset: page * limit
+        })
+      }
+    });
+
+    const pokemons = await Promise.all(
+      results.map(({ name }) => this.getPokemon(name))
+    );
+
+    const data = pokemons.map(({ name, images }) => ({
+      name,
+      image: images.default
+    }));
+
+    const totalPages = Math.floor(count / limit);
+    return {
+      prev: page ? page - 1 : null,
+      next: (page || 0) < totalPages ? (page || 0) + 1 : null,
+      totalPages,
+      data
+    };
+  }
+
   async getPokemon(name: string): Promise<IPokemon> {
     const { data } = await this.apiInstance.get('pokemon/' + name);
     return this.sanitizePokemonData(data);
