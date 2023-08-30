@@ -4,7 +4,7 @@ import PokeApiService from '../services/PokeApi';
 const service = new PokeApiService();
 
 export default class PokemonController {
-  static async getByName(req: Request, res: Response) {
+  static async getByName(req: Request, res: Response): Promise<Response> {
     try {
       const { name } = req.params;
       const result: IPokemon = await service.getPokemon(name);
