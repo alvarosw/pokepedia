@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "outDir": "build",
+    "baseUrl": "./",
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "sourceRoot": "/",
+    "noImplicitReturns": true,
+  },
+  "include": [
+    "./**/*.ts"
+  ],
+  "exclude": [
+    "node_modules/**/*"
+  ]
+}
