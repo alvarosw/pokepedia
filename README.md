@@ -1,5 +1,6 @@
 # pokepedia
-Aplicação simples de listagem e amostra de pokemons
+Aplicação simples de listagem e amostra de pokemons.
+Atualmente rodando o front na vercel e a API numa instância EC2.
 
 Teste agora clicando [aqui](https://pokepedia-eight.vercel.app/) (pode ser que você precise desbloquear o acesso a conteúdo inseguro - HTTP) ou instale e rode localmente seguindo o passo a passo abaixo:
 
