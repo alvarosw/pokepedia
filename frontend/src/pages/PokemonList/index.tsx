@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { CircularProgress, Pagination } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 import './styles.css';
 
@@ -36,10 +37,10 @@ export default function PokemonList() {
           (
             <div id="listContainer">{
               list.data.map(pokemon => (
-                <a className='card' href={pokemon.name}>
+                <Link className='card' to={pokemon.name}>
                   <img src={pokemon.image} alt={pokemon.name} />
                   <span>{pokemon.name}</span>
-                </a>))
+                </Link>))
             }</div>
           )
         }

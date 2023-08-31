@@ -1,0 +1,67 @@
+.container {
+  height: 100%;
+  overflow: hidden;
+  background-image: url('/public/body-bg.png');
+}
+
+main {
+  background-image: url('/public/container_bg.png');
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 12vw;
+  height: 100vh;
+}
+
+.pokemonInfo {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+header {
+  text-transform: uppercase;
+  padding: 20px 50px;
+  font-size: x-large;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  padding: 0 50px;
+  width: 100%;
+}
+
+.carouselContainer {
+  height: 320px;
+  width: 320px;
+  background-color: #F5F5F5;
+  box-shadow: -2px 2px 5px #d6d6d6;
+}
+
+.shinyIndicator {
+  position: relative;
+  float: right;
+  top: -100px;
+  left: -10px;
+}
+
+.attributes {
+  display: flex;
+  flex-direction: column;
+}
+
+.attributes strong {
+  margin-right: 3px;
+}
+
+.statLabel {
+  color: white;
+  font-weight: 500;
+  padding: 2px 6px;
+  margin: 0 5px 0 0;
+  border-radius: 4px;
+}
