@@ -3,12 +3,24 @@ Aplicação simples de listagem e amostra de pokemons
 
 Teste agora clicando [aqui](https://pokepedia-eight.vercel.app/) (pode ser que você precise desbloquear o acesso a conteúdo inseguro - HTTP) ou instale e rode localmente seguindo o passo a passo abaixo:
 
-### Clone o repositório
-
-No seu terminal, digite:
-``` bash
+## Clone o repositório
+Digite no terminal:
+```bash
 git clone https://github.com/alvarosw/pokepedia
 cd pokepedia
+```
+
+## Rodando com o Docker
+Para a primeira vez, na raíz do projeto digite: 
+```
+docker-compose up --build
+```
+
+Nas próximas não se faz mais necessária a flag `--build`
+
+## Rodando manualmente
+No seu terminal, digite:
+``` bash
 cd backend
 npm i
 cd ../frontend
