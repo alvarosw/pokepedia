@@ -1,0 +1,54 @@
+.container {
+  height: 100%;
+  overflow: hidden;
+  background-image: url('/public/body-bg.png');
+}
+
+main {
+  background-image: url('/public/container_bg.png');
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 12vw;
+  height: 100vh;
+}
+
+#listContainer {
+  display: flex;
+  height: 84%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: start;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  width: 150px;
+  background-color: #313131;
+  border: 3px solid #232323;
+}
+
+.card img {
+  padding: 0 10px;
+  background-color: #616161;
+  background-image: url('/public/card-bg.png');
+  background-size: 200px;
+}
+
+.card span {
+  text-transform: capitalize;
+  font-weight: 500;
+  color: white;
+  margin: 10px 0 0 8px;
+}
+
+a {
+  text-decoration: none;
+}
