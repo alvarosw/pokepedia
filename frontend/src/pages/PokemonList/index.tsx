@@ -21,7 +21,7 @@ export default function PokemonList() {
     (async () => {
       setIsLoading(true);
       try {
-        const result = await (await fetch(`http://localhost:8000/pokemon?limit=32&page=${page}`)).json();
+        const result = await (await fetch(`${process.env.REACT_APP_API_HOST}/pokemon?limit=32&page=${page}`)).json();
         setList(result);
         setIsLoading(false);
       } catch (error) {

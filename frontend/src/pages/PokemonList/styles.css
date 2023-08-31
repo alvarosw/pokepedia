@@ -21,7 +21,7 @@ main {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  align-content: start;
+  align-content: flex-start;
   padding: 2rem;
   overflow-y: auto;
 }

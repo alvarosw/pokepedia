@@ -13,7 +13,7 @@ export default function Pokemon() {
   useEffect(() => {
     (async () => {
       try {
-        const result = await (await fetch(`http://localhost:8000/pokemon/${name}`)).json();
+        const result = await (await fetch(`${process.env.REACT_APP_API_HOST}/pokemon/${name}`)).json();
         setPokemon(result);
         setIsLoading(false);
       } catch (error) {
