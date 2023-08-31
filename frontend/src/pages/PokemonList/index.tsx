@@ -3,6 +3,7 @@ import { CircularProgress, Pagination } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 import './styles.css';
+import api from '../../services/api';
 
 export default function PokemonList() {
   const [list, setList] = useState<IPokemonList>({
@@ -21,7 +22,7 @@ export default function PokemonList() {
     (async () => {
       setIsLoading(true);
       try {
-        const result = await (await fetch(`${process.env.REACT_APP_API_HOST}/pokemon?limit=32&page=${page}`)).json();
+        const { data: result } = await api.get(`pokemon?limit=32&page=${page}`);
         setList(result);
         setIsLoading(false);
       } catch (error) {

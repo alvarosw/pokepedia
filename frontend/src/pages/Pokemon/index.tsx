@@ -4,6 +4,7 @@ import { CircularProgress, List, ListItem, capitalize } from '@mui/material';
 import Carousel from 'react-material-ui-carousel';
 
 import './styles.css';
+import api from '../../services/api';
 
 export default function Pokemon() {
   let { name } = useParams();
@@ -13,7 +14,7 @@ export default function Pokemon() {
   useEffect(() => {
     (async () => {
       try {
-        const result = await (await fetch(`${process.env.REACT_APP_API_HOST}/pokemon/${name}`)).json();
+        const { data: result } = await api.get(`pokemon/${name}`);
         setPokemon(result);
         setIsLoading(false);
       } catch (error) {
